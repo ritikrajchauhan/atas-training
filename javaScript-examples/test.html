@@ -153,6 +153,7 @@ document.getElementById("demo").innerHTML = hello("Universe!");
 -->
 
 <!--constructor example-->
+<!--
 <!DOCTYPE html>
 <html>
 <body>
@@ -172,5 +173,29 @@ const myFather = new Person("John", "Doe", 50, "blue");
 document.getElementById("demo").innerHTML =
 "My father is " + myFather.age + "."; 
 </script>
+</body>
+</html>
+-->
+
+<!--asynchronous programming example-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript async / await</h2>
+
+<h1 id="demo"></h1>
+
+<script>
+async function myDisplay() {
+  let myPromise = new Promise(function(resolve, reject) {
+    resolve("Hello world !!");
+  });
+  document.getElementById("demo").innerHTML = await myPromise;
+}
+
+myDisplay();
+</script>
+
 </body>
 </html>
